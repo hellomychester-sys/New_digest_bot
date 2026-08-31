@@ -169,7 +169,7 @@ async def run_digest(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     with tempfile.TemporaryDirectory() as tmp_dir:
         file_path = Path(tmp_dir) / f"digest_{datetime.now().strftime('%Y-%m-%d')}.pdf"
         try:
-            build_pdf(items, insights, week_label, file_path)
+            await asyncio.to_thread(build_pdf, items, insights, week_label, file_path)
         except Exception as exc:  # noqa: BLE001
             logger.exception("Ошибка при сборке PDF")
             await status_message.edit_text(f"Дайджест собран, но не получилось сделать PDF: {exc}")
