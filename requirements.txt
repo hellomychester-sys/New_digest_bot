@@ -3,3 +3,5 @@ python-dotenv==1.0.1
 anthropic==0.40.0
 reportlab==4.2.5
 matplotlib==3.9.2
+requests==2.32.3
+Pillow==10.4.0
