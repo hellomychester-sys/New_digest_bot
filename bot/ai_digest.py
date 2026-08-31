@@ -1,8 +1,3 @@
-bash
-
-cat /home/claude/news-bot-v2/bot/ai_digest.py
-Output
-
 """
 Генерация дайджеста новостей через Claude API со встроенным веб-поиском.
 
